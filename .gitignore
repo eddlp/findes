@@ -10,20 +10,20 @@ web/bundles/*
 web/css/*
 web/js/*
 web/uploads/*
- 
+
 # -- Composer -----------------------------------------
 composer.phar
- 
+
 # -- PHPUnit ------------------------------------------
-app/phpunit.xml  
- 
+app/phpunit.xml
+
 # -- Editores -----------------------------------------
 # vim
 .*.sw[a-z]
 *.un~
 Session.vim
 .netrwhist
- 
+
 # eclipse
 *.pydevproject
 .project
@@ -42,19 +42,19 @@ local.properties
 .externalToolBuilders/
 *.launch
 .buildpath
- 
+
 # phpstorm
 .idea/
- 
+
 # textmate
 *.tmproj
 *.tmproject
 tmtags
- 
+
 # sublimetext
 /*.sublime-project
 *.sublime-workspace
- 
+
 # netbeans
 nbproject/private/
 build/
@@ -63,20 +63,20 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
- 
+
 # -- Sistemas Operativos ------------------------------
 # Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
- 
+
 # Linux
 .*
 !.gitignore
 !.htaccess
 *~
- 
+
 # Mac OS X
 .DS_Store
 .AppleDouble
