@@ -52,20 +52,20 @@ class usuario
     /**
      * @var string
      *
-     * @ORM\Column(name="token", type="string", length=255)
+     * @ORM\Column(name="token", type="string", length=255, nullable=TRUE)
      */
     private $token;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="fecha_token", type="datetime")
+     * @ORM\Column(name="fecha_token", type="datetime", nullable=TRUE)
      */
     private $fechaToken;
 
     /**
      * @ORM\OneToOne(targetEntity="persona")
-     * @ORM\JoinColumn(name="id_persona", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_persona", referencedColumnName="id", nullable=FALSE)
      */
     private $persona;
 

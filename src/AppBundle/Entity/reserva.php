@@ -45,25 +45,25 @@ class reserva
     /**
      * @var string
      *
-     * @ORM\Column(name="observacion", type="string", length=255)
+     * @ORM\Column(name="observacion", type="string", length=255, nullable=TRUE)
      */
     private $observacion;
 
     /**
      * @ORM\ManyToOne(targetEntity="casa")
-     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id", nullable=FALSE)
      */
     private $casa;
 
     /**
      * @ORM\ManyToOne(targetEntity="persona")
-     * @ORM\JoinColumn(name="id_persona_reserva", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_persona_reserva", referencedColumnName="id", nullable=FALSE)
      */
     private $persona_reserva;
 
     /**
      * @ORM\ManyToOne(targetEntity="estado")
-     * @ORM\JoinColumn(name="id_estado", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_estado", referencedColumnName="id", nullable=FALSE)
      */
     private $estado;
 

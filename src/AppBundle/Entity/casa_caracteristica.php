@@ -24,19 +24,19 @@ class casa_caracteristica
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion", type="string", length=255)
+     * @ORM\Column(name="descripcion", type="string", length=255, nullable=TRUE)
      */
     private $descripcion;
 
     /**
      * @ORM\ManyToOne(targetEntity="casa")
-     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id", nullable=FALSE)
      */
     private $casa;
 
     /**
      * @ORM\ManyToOne(targetEntity="caracteristica")
-     * @ORM\JoinColumn(name="id_caracteristica", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_caracteristica", referencedColumnName="id", nullable=FALSE)
      */
     private $caracteristica;
 

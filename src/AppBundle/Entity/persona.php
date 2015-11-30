@@ -66,7 +66,7 @@ class persona
     /**
      * @var string
      *
-     * @ORM\Column(name="telefono2", type="string", length=255)
+     * @ORM\Column(name="telefono2", type="string", length=255, nullable=TRUE)
      */
     private $telefono2;
 

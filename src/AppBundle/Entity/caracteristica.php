@@ -30,7 +30,7 @@ class caracteristica
 
     /**
      * @ORM\ManyToOne(targetEntity="estado")
-     * @ORM\JoinColumn(name="id_estado", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_estado", referencedColumnName="id", nullable=FALSE)
      */
     private $estado;
 

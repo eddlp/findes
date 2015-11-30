@@ -37,7 +37,7 @@ class precio
 
     /**
      * @ORM\ManyToOne(targetEntity="casa")
-     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_casa", referencedColumnName="id", nullable=FALSE)
      */
     private $casa;
 

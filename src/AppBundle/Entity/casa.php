@@ -65,7 +65,7 @@ class casa
 
     /**
      * @ORM\ManyToOne(targetEntity="persona")
-     * @ORM\JoinColumn(name="id_persona", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_persona", referencedColumnName="id", nullable=FALSE)
      */
     private $persona;
 
@@ -130,7 +130,7 @@ class casa
     /**
      * Set ba¤os
      *
-     * @param integer $ba¤os
+     * @param integer $banios
      *
      * @return casa
      */
@@ -142,7 +142,7 @@ class casa
     }
 
     /**
-     * Get ba¤os
+     * Get banios
      *
      * @return integer
      */
