@@ -5,9 +5,32 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        {% include "::stylesheets.html.twig" %}
     </head>
     <body>
+        {% block navbar %}
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="estados/listar">
+                            <img alt="Brand" src="...">
+                        </a>
+                        <a class="navbar-brand" href="usuarios">
+                            LOGIN
+                        </a>
+                        <a class="navbar-brand" href="usuarios">
+
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>

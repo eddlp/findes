@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Estados</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        <table>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+        </tr>
+        {% for estado in estados %}
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
+                <td>{{ estado.id }}</td>
+                <td>{{ estado.nombre }}</td>
             </tr>
-            {% for estado in estados %}
-                <tr>
-                    <td>{{ estado.id }}</td>
-                    <td>{{ estado.nombre }}</td>
-                </tr>
-            {% endfor %}
-        </table>
-    </body>
-</html>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+
+{% block stylesheets %}
+
+{% endblock %}
+

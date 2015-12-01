@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h3>Registro de usuario</h3>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+            <h3>Datos de Sesion</h3>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Email</label>
+                        <input type="text" class="form-control" id="apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">Confirmar Email</label>
+                        <input type="text" class="form-control" id="dni">
+                    </div>
+                    <div class="form-group">
+                        <label for="dir">Contraseña</label>
+                        <input type="text" class="form-control" id="dir">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel1">Confirmar contraseña</label>
+                        <input type="text" class="form-control" id="tel1">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Registrarme</button>
+                </form>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h3>Datos Personales</h3>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" id="dni">
+                    </div>
+                    <div class="form-group">
+                        <label for="dir">Direcci&oacute;n</label>
+                        <input type="text" class="form-control" id="dir">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel1">Tel&eacute;fono</label>
+                        <input type="text" class="form-control" id="tel1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel2">Tel&eacute;fono 2</label>
+                        <input type="text" class="form-control" id="tel2">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Registrarme</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
