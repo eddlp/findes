@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use AppBundle\Entity\estado;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class EstadoController extends Controller
 {
     /**
-     * @Route("/save")
+     * @Route("/guardar")
      */
     public function createAction(Request $request)
     {
@@ -44,7 +45,7 @@ class EstadoController extends Controller
             );
         }
 
-
+        return $this->render('estado/estadoDetail.html.twig', array('estado' => $estado));
     }
 
     /**
@@ -52,7 +53,26 @@ class EstadoController extends Controller
      */
     public function showAllAction()
     {
+        $estados = $this->getDoctrine()
+            ->getRepository('AppBundle:estado')
+            ->findAll();
 
+        return $this->render('estado/estado.html.twig', array('estados' => $estados));
     }
 
+    /**
+     * @Route("/eliminar/{id}")
+     */
+    public function deleteAction($id)
+    {
+        $estado = $this->getDoctrine()
+            ->getRepository('AppBundle:estado')
+            ->find($id);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($estado);
+        $em->flush();
+
+        return new Response('Estado eliminado. Id: '.$id);
+    }
 }
